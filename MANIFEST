@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/WEC-RecordTailer.t
+lib/WEC/RecordTailer.pm
