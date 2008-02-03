@@ -4,3 +4,4 @@ MANIFEST
 README
 t/WEC-RecordTailer.t
 lib/WEC/RecordTailer.pm
+md5-versions
