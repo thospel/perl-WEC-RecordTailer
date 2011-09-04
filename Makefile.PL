@@ -5,12 +5,14 @@ use ExtUtils::MakeMaker;
 WriteMakefile
     (NAME              => 'WEC::RecordTailer',
      VERSION_FROM      => 'lib/WEC/RecordTailer.pm', # finds $VERSION
+     BUILD_REQUIRES	=> {
+	 # Only for the tests
+	 "Test::More"	=> "0.01",
+     },
      PREREQ_PM         => {
          "Exporter::Tidy"	=> 0.05,
-         "Test::More"		=> 0.11,	# For the tests only
      },
-     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
-      (AUTHOR         => 'Ton Hospel <WEC::RecordTailer@ton.iguana.be>') : ()),
+     AUTHOR         => 'Ton Hospel <WEC::RecordTailer@ton.iguana.be>',
      $^O eq "MSWin32" ? (
          PM_FILTER	=> '$(PERL) -p -e1',
      ) : (),
